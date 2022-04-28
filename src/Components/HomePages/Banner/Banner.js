@@ -3,8 +3,8 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className='container'>
-            <img src="https://i.ibb.co/HnM2LqY/banner.jpg" className='w-75 ' alt="" />
+        <div className=' '>
+            <img src="https://i.ibb.co/kM4swnz/banner1.jpg" className='w-100 ' alt="" />
 
             
             
