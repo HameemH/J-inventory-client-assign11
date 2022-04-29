@@ -8,6 +8,7 @@ import Registration from './Components/RoutePages/Authentication/Registration/Re
 import Footer from './Components/Shared/Footer/Footer';
 import Inventory from './Components/RoutePages/Inventory/Inventory';
 import RequireAuth from './Components/RoutePages/Authentication/RequireAuth/RequireAuth';
+import Newitems from './Components/RoutePages/NewItems/Newitems';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='/inventory' element={<RequireAuth>
           <Inventory></Inventory>
+        </RequireAuth>}></Route>
+        <Route path='/inventory/newitem' element={<RequireAuth>
+          <Newitems></Newitems>
         </RequireAuth>}></Route>
       </Routes>
       <Footer></Footer>

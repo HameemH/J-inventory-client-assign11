@@ -14,7 +14,7 @@ const Inventory = () => {
                items.map(item=><InventoryItems item={item}></InventoryItems>)
            } 
           </div>
-          <Button className='button-primary shadow-lg'><Link to='inventory' className='text-decoration-none text-white'>Add new Items</Link></Button>
+          <Button className='button-primary shadow-lg'><Link to='newitem' className='text-decoration-none text-white'>Add new Items</Link></Button>
         </div>
     );
 };
