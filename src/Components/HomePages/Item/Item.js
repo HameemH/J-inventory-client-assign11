@@ -7,8 +7,8 @@ const Item = (props) => {
     return (
   
         <div className='col-4 ' style={{backGround:'lightblue'}}>
-            <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={img} />
+            <Card style={{ width: '18rem',  }}>
+  <Card.Img variant="top" src={img} style={{height:'250px'}} />
   <Card.Body>
     <Card.Title>{name}</Card.Title>
     <Card.Text>
