@@ -3,6 +3,7 @@ import Item from '../../HomePages/Item/Item';
 import InventoryItems from '../InventoryItems/InventoryItems';
 import Setitems from './../../CustomHooks/ItemsHook/ItemsHook';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const Inventory = () => {
     const [items, setItems] = Setitems();
