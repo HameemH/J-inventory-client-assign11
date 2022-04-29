@@ -3,6 +3,7 @@ import Item from '../Item/Item';
 import './Items.css';
 import Setitems from './../../CustomHooks/ItemsHook/ItemsHook';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 const Items = () => {
@@ -17,7 +18,7 @@ const [items, setItems] = Setitems();
                 items.slice(0,6).map(item=><Item item={item}></Item>)
             }
            </div>
-           <Button></Button>
+           <Button className='button-primary shadow-lg'><Link to='inventory' className='text-decoration-none text-white'>Manage Inventory</Link></Button>
         </div>
     );
 };

@@ -6,6 +6,7 @@ import Home from './Components/HomePages/Home/Home';
 import Login from './Components/RoutePages/Authentication/Login/Login';
 import Registration from './Components/RoutePages/Authentication/Registration/Registration';
 import Footer from './Components/Shared/Footer/Footer';
+import Inventory from './Components/RoutePages/Inventory/Inventory';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
+        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
