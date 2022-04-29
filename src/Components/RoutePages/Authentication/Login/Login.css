@@ -1,0 +1,16 @@
+.loginPage{
+    background-color: lightblue;
+   
+}
+
+.loginContainer {
+    position: relative;
+    width: 400px;
+    margin:  auto;
+    
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: lightblue;
+    box-shadow: 14px 14px 20px #d2dfec, -5px -5px 9px rgb(243, 239, 239);
+}
