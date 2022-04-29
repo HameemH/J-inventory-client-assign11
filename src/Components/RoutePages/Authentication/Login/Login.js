@@ -48,7 +48,7 @@ const Login = () => {
     }
     return (
         <div>
-            <div className=' loginPage p-2'>
+            <div className=' loginPage py-5'>
             <div className='loginContainer mt-5'>
             <h1>Log In</h1>
             <form className='d-flex flex-column' onSubmit={handleLogin}  >
@@ -57,6 +57,9 @@ const Login = () => {
                 
              <input type="submit" value="Login"className='btn btn-primary shadow rounded-pill mb-3'/>  
             </form>
+            <p className='text-danger'>{CustomErrorEmail}</p>
+            <p className='text-danger'>{CustomErrorPassword}</p>
+            <p className='text-danger'>{Error?.message}</p>
             <p>New here ? <Link to="/registration" className='text-primary pe-auto text-decoration-none mt-3'>Please Register</Link> </p>
             <p>Forget Password? <Link to="" className=' text-primary  text-decoration-none' >Reset Password</Link> </p>
              <Button on className='btn btn-primary shadow mt-2 rounded-pill' onClick={() => signInWithGoogle()} >Login with google</Button>
