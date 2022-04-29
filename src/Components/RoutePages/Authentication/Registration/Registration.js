@@ -52,7 +52,7 @@ const handleConfirmPassword =e =>{
 const handleRegistration = e=>{
     e.preventDefault();
     console.log(email,password)
-    if(password == confirmPassword){
+    if(password === confirmPassword){
         createUserWithEmailAndPassword(email, confirmPassword);
         sendEmailVerification();
         setcustomError('')
