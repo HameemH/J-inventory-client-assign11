@@ -9,6 +9,7 @@ import Footer from './Components/Shared/Footer/Footer';
 import Inventory from './Components/RoutePages/Inventory/Inventory';
 import RequireAuth from './Components/RoutePages/Authentication/RequireAuth/RequireAuth';
 import Newitems from './Components/RoutePages/NewItems/Newitems';
+import Notfound from './Components/RoutePages/404page/Notfound';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/inventory/newitem' element={<RequireAuth>
           <Newitems></Newitems>
         </RequireAuth>}></Route>
+        <Route path='/*' element={<Notfound></Notfound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
