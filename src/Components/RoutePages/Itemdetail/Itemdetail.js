@@ -1,9 +1,13 @@
 import React,{useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { async } from '@firebase/util';
 
 const Itemdetail = () => {
     const {id} = useParams();
-    const [item, setItem] = useState();
+    const [item, setItem] = useState({});
+    console.log(item);
+    
     useEffect(()=>{
       fetch(`http://localhost:5000/item/${id}`)
       .then(res => res.json())
@@ -11,10 +15,75 @@ const Itemdetail = () => {
           console.log(data);
           setItem(data)
       })
-    },[])
+    },[]);
+    const handleDelivery =  (e)=>{
+       e.preventDefault()
+        const Quantity = parseInt(item?.quantity) -1;
+        console.log(Quantity);
+        const newitem ={name:item?.name,price:item?.price,quantity: Quantity,supplier:item?.supplier,description:item?.description, img:item?.img, vendorEmail:item?.vendorEmail}
+        const url = `http://localhost:5000/item/${id}`;
+        console.log(url);
+       fetch(`http://localhost:5000/item/${id}`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newitem)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log('success', data);
+            alert('item Updated');
+           
+        })
+    }
+    const updateRestock=e =>{
+        e.preventDefault();
+        const newquantity = e.target.quantity.value;
+        console.log(newquantity);
+        const newitem ={name:item?.name,price:item?.price,quantity: newquantity,supplier:item?.supplier,description:item?.description, img:item?.img, vendorEmail:item?.vendorEmail}
+        fetch(`http://localhost:5000/item/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log('success', data);
+            alert('item Added');
+            e.target.reset();
+        })
+
+    }
+    
     return (
-        <div className='loginPage'>
-            <h1>{item?.name}</h1>
+        <div className='loginPage py-5'>
+            <div className="row">
+                <div className="col-6">
+                    <div className='loginContainer mt-3'>
+                        <h2>Product Details</h2>
+                        <img src={item?.img} className='w-50' alt="" />
+                        <h4>Product name:{item?.name}</h4>
+                        <p>{item?.description}</p>
+                        <h4>Price:{item?.price}</h4>
+                        <h4>Quantity:{item?.quantity}</h4>
+                        <h4>Supplied By:{item?.supplier}</h4>
+                        <Button className='mt-2' onClick={handleDelivery}>Delivered</Button>
+                    </div>
+                </div>
+                <div className="col-6">
+                    <div className='loginContainer mt-2'>
+                        <h2>Restock your Item</h2>
+                        
+                    <form onSubmit={updateRestock}>
+                    <input type="text" name='quantity' className='p-2 m-2 rounded-pill border border-0 shadow' />
+                     <input type="submit" value="Restock" className='btn btn-primary shadow shadow-lg rounded-pill'/> 
+                    </form>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

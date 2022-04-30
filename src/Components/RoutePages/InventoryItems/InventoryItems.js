@@ -1,14 +1,17 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import Setitems from './../../CustomHooks/ItemsHook/ItemsHook';
 
 const InventoryItems = (props) => {
     const {_id,name,img,price,quantity,supplier,description}= props.item;
+    const {manageDelete}= props
     const navigate =useNavigate()
     console.log(props.item);
     const manageUpdate= id=>{
       navigate(`/inventory/${id}`)
     }
+   
     return (
   
         <div className='col-4 ' style={{backGround:'lightblue'}}>
@@ -27,7 +30,7 @@ const InventoryItems = (props) => {
   </ListGroup>
   <Card.Body>
   <Button variant="primary" onClick={()=>manageUpdate(_id)}>Manage Update</Button>
-  <Button variant="primary" className='ms-2'>Delete</Button>
+  <Button variant="primary" className='ms-2'onClick={()=>manageDelete(_id)}>Delete</Button>
   </Card.Body>
 </Card>
         </div>
