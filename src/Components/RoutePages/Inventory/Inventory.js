@@ -11,7 +11,7 @@ const Inventory = () => {
         <div className='loginPage p-2'>
           <div className="row container mx-auto gy-3">
           {
-               items.map(item=><InventoryItems item={item}></InventoryItems>)
+               items.map(item=><InventoryItems key={item._id}  item={item}></InventoryItems>)
            } 
           </div>
           <Button className='button-primary shadow-lg'><Link to='newitem' className='text-decoration-none text-white'>Add new Items</Link></Button>

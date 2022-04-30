@@ -15,7 +15,7 @@ const [items, setItems] = Setitems();
             <h1 className='text-white'>Inventory Items</h1>
            <div className='row mx-auto gy-2 container p-5'>
            {
-                items.slice(0,6).map(item=><Item item={item}></Item>)
+                items.slice(0,6).map(item=><Item key={item._id} item={item}></Item>)
             }
            </div>
            <Button className='button-primary shadow-lg'><Link to='inventory' className='text-decoration-none text-white'>Manage Inventory</Link></Button>

@@ -1,9 +1,14 @@
 import React from 'react';
 import { Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Item = (props) => {
-    const {name,img,price,quantity,supplier,description}= props.item;
-    console.log(name);
+    const {_id,name,img,price,quantity,supplier,description}= props.item;
+    const navigate =useNavigate()
+    console.log(props.item);
+    const manageUpdate= id=>{
+      navigate(`/inventory/${id}`)
+    }
     return (
   
         <div className='col-4 ' style={{backGround:'lightblue'}}>
@@ -21,7 +26,7 @@ const Item = (props) => {
     <ListGroupItem>Supplier:{supplier}</ListGroupItem>
   </ListGroup>
   <Card.Body>
-  <Button variant="primary">Manage Update</Button>
+  <Button variant="primary" onClick={()=>manageUpdate(_id)}>Manage Update</Button>
   </Card.Body>
 </Card>
         </div>
