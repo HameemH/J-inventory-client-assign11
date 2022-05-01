@@ -22,7 +22,7 @@ const Myitems = () => {
             .then(data =>{
                 if(data.deletedCount > 0){
                     console.log('deleted');
-                    const remaining = items.filter(user => user._id !== id);
+                    const remaining = items.filter(item => item._id !== id);
                     setItems(remaining);
                 }
             })
