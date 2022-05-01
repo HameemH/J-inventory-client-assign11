@@ -2,17 +2,19 @@ import React from 'react';
 import { Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-const Item = (props) => {
+const Myitemsitem = (props) => {
     const {_id,name,img,price,quantity,supplier,description}= props.item;
+    const {manageDelete}= props
     const navigate =useNavigate()
     console.log(props.item);
     const manageUpdate= id=>{
       navigate(`/inventory/${id}`)
     }
+   
     return (
   
-        <div className='col-md-4 col-sm-12' style={{backGround:'lightblue'}}>
-            <Card className='shadow' style={{ width: '20rem', backGround:'lightblue'} }>
+        <div className='col-md-4 col-sm-12 ' style={{backGround:'lightblue'}}>
+            <Card style={{ width: '18rem',  }}>
   <Card.Img variant="top" src={img} style={{height:'250px'}} />
   <Card.Body>
     <Card.Title>{name}</Card.Title>
@@ -27,6 +29,7 @@ const Item = (props) => {
   </ListGroup>
   <Card.Body>
   <Button variant="primary" onClick={()=>manageUpdate(_id)}>Manage Update</Button>
+  <Button variant="primary" className='ms-2'onClick={()=>manageDelete(_id)}>Delete</Button>
   </Card.Body>
 </Card>
         </div>
@@ -34,4 +37,4 @@ const Item = (props) => {
     );
 };
 
-export default Item;
+export default Myitemsitem;

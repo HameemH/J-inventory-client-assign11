@@ -14,7 +14,7 @@ const InventoryItems = (props) => {
    
     return (
   
-        <div className='col-4 ' style={{backGround:'lightblue'}}>
+        <div className='col-md-4 col-sm-12 ' style={{backGround:'lightblue'}}>
             <Card style={{ width: '18rem',  }}>
   <Card.Img variant="top" src={img} style={{height:'250px'}} />
   <Card.Body>

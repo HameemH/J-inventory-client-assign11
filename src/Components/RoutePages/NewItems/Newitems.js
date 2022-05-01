@@ -27,6 +27,31 @@ const Newitems = () => {
             alert('item Added');
             e.target.reset();
         })
+        fetch('http://localhost:5000/addeditem', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log('success', data);
+            alert('item Added');
+            e.target.reset();
+        })
+        fetch('http://localhost:5000/item', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log('success', data);
+          
+        })
     }
     return (
         <div className='loginPage py-5'>

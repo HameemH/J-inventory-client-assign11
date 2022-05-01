@@ -11,6 +11,8 @@ import RequireAuth from './Components/RoutePages/Authentication/RequireAuth/Requ
 import Newitems from './Components/RoutePages/NewItems/Newitems';
 import Notfound from './Components/RoutePages/404page/Notfound';
 import Itemdetail from './Components/RoutePages/Itemdetail/Itemdetail';
+import Blogs from './Components/RoutePages/Blogs/Blogs';
+import Myitems from './Components/RoutePages/Myitems/Myitems';
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path ='myitems' element={<RequireAuth>
+          <Myitems></Myitems>
+        </RequireAuth>}></Route>
         <Route path='/inventory' element={<RequireAuth>
           <Inventory></Inventory>
         </RequireAuth>}></Route>
@@ -28,6 +34,9 @@ function App() {
           <Itemdetail></Itemdetail>
         </RequireAuth>}></Route>
         <Route path='/inventory/newitem' element={<RequireAuth>
+          <Newitems></Newitems>
+        </RequireAuth>}></Route>
+        <Route path='/newitem' element={<RequireAuth>
           <Newitems></Newitems>
         </RequireAuth>}></Route>
         <Route path='/*' element={<Notfound></Notfound>}></Route>
