@@ -42,7 +42,7 @@ const Myitems = () => {
     }, [user])
     return (
         <div className='loginPage py-5 '>
-           <div className='row container'>
+           <div className='row container mx-auto'>
            {
                 items.map(item=><Myitemsitem key={item._id} item={item} manageDelete={manageDelete}></Myitemsitem>)
             }

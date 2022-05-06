@@ -10,7 +10,7 @@ import Inventory from './Components/RoutePages/Inventory/Inventory';
 import RequireAuth from './Components/RoutePages/Authentication/RequireAuth/RequireAuth';
 import Newitems from './Components/RoutePages/NewItems/Newitems';
 import Notfound from './Components/RoutePages/404page/Notfound';
-import Itemdetail from './Components/RoutePages/Itemdetail/Itemdetail';
+import ItemdetailandUpdate from './Components/RoutePages/ItemdetailandUpdate/ItemdetailandUpdate';
 import Blogs from './Components/RoutePages/Blogs/Blogs';
 import Myitems from './Components/RoutePages/Myitems/Myitems';
 
@@ -31,7 +31,7 @@ function App() {
           <Inventory></Inventory>
         </RequireAuth>}></Route>
         <Route path='/inventory/:id' element={<RequireAuth>
-          <Itemdetail></Itemdetail>
+          <ItemdetailandUpdate></ItemdetailandUpdate>
         </RequireAuth>}></Route>
         <Route path='/inventory/newitem' element={<RequireAuth>
           <Newitems></Newitems>

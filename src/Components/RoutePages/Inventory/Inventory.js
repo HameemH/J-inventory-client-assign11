@@ -32,7 +32,7 @@ const Inventory = () => {
                items.map(item=><InventoryItems key={item._id}  item={item} manageDelete={manageDelete}></InventoryItems>)
            } 
           </div>
-          <Button className='button-primary shadow-lg'><Link to='newitem' className='text-decoration-none text-white'>Add new Items</Link></Button>
+          <Button className='button-primary shadow-lg mt-3'><Link to='newitem' className='text-decoration-none text-white'>Add new Items</Link></Button>
         </div>
     );
 };
