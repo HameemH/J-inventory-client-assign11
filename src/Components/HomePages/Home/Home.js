@@ -4,6 +4,7 @@ import Items from '../Items/Items';
 import auth from './../../../firebse.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Spinner } from 'react-bootstrap';
+import Suppliers from '../Suppliers/Suppliers';
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
         <div >
             <Banner></Banner>
             <Items></Items>
+            <Suppliers></Suppliers>
             
         </div>
     );
