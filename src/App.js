@@ -13,11 +13,10 @@ import Notfound from './Components/RoutePages/404page/Notfound';
 import ItemdetailandUpdate from './Components/RoutePages/ItemdetailandUpdate/ItemdetailandUpdate';
 import Blogs from './Components/RoutePages/Blogs/Blogs';
 import Myitems from './Components/RoutePages/Myitems/Myitems';
-import auth from './firebse.init';
-import { useAuthState } from 'react-firebase-hooks/auth';
+
 
 function App() {
-  const [user, loading] = useAuthState(auth)
+ 
   return (
     <div className="App ">
       <Header></Header>
