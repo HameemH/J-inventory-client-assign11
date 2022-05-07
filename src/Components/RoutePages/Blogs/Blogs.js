@@ -15,6 +15,7 @@ const Blogs = () => {
                 </div>
                 <div className="loginContainer col-md-6 col-sm-12">
                     <h4>Q.What is the purpose of jwt and how does it work</h4>
+                    <p>JWT is the short form JSON web token.It is used to transmit data securely from fornt end to backend so that we only give data to authorized person.When client login server generates a jwt and sends it to the client side where it is stored in the client side in the browser.After that when ever client side makes a request the jwt also goes to server and server varifies the token. If the token is valid server gives the requested data.</p>
                 </div>
                 <div className="loginContainer col-md-6 col-sm-12">
                     <h4>Q.When should you use nodejs and when should you use mongodb</h4>
