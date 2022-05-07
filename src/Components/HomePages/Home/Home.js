@@ -5,6 +5,7 @@ import auth from './../../../firebse.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Spinner } from 'react-bootstrap';
 import Suppliers from '../Suppliers/Suppliers';
+import Newsletter from '../Newsletter/Newsletter';
 
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
             <Banner></Banner>
             <Items></Items>
             <Suppliers></Suppliers>
-            
+            <Newsletter></Newsletter>
         </div>
     );
    }
