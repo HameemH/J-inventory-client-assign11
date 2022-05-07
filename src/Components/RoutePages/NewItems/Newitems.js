@@ -14,7 +14,7 @@ const Newitems = () => {
         const vendorEmail = e.target.email.value;
         const description = e.target.description.value;
         const item ={name, price:price, quantity:quantity, supplier,description,img,vendorEmail}
-        fetch('http://localhost:5000/item', {
+        fetch('https://limitless-beach-92720.herokuapp.com/item', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

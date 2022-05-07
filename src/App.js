@@ -13,6 +13,7 @@ import Notfound from './Components/RoutePages/404page/Notfound';
 import ItemdetailandUpdate from './Components/RoutePages/ItemdetailandUpdate/ItemdetailandUpdate';
 import Blogs from './Components/RoutePages/Blogs/Blogs';
 import Myitems from './Components/RoutePages/Myitems/Myitems';
+import Complaint from './Components/RoutePages/Complaint/Complaint';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/complaint' element={<Complaint></Complaint>}></Route>
         <Route path ='myitems' element={<RequireAuth>
           <Myitems></Myitems>
         </RequireAuth>}></Route>

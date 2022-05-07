@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Jontro Inventory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live site](https://assignment11-3ec5e.web.app).
 
-## Available Scripts
+## Description
 
 In the project directory, you can run:
 

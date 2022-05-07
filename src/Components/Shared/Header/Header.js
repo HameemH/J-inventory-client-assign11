@@ -15,7 +15,7 @@ const Header = () => {
         <div>
             <Navbar className='background'  expand="lg">
   <Container>
-    <Navbar.Brand as={Link} to="" className='text-white'>React-Bootstrap</Navbar.Brand>
+    <Navbar.Brand as={Link} to="" className='text-white'>Jontro Inventory</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
@@ -33,6 +33,7 @@ const Header = () => {
         user?<Nav.Link as={Link} to="myitems" className='text-white fw-bold'>My Items</Nav.Link>: null
       }
        <Nav.Link as={Link} to="blogs" className='text-white fw-bold'>Blogs</Nav.Link>
+       <Nav.Link as={Link} to="complaint" className='text-white fw-bold'>Complaint</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>

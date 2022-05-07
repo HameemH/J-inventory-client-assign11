@@ -14,7 +14,7 @@ const Myitems = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id, ', id);
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://limitless-beach-92720.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -32,7 +32,7 @@ const Myitems = () => {
         
         const getItems = async () =>{
             const email = user.email;
-            const url = `http://localhost:5000/addeditem?vendorEmail=${email}`;
+            const url = `https://limitless-beach-92720.herokuapp.com/addeditem?vendorEmail=${email}`;
          const {data}=  await axios.get(url)
          setItems(data)
         }
