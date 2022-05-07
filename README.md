@@ -4,7 +4,13 @@
 
 ## Description
 
-In the project directory, you can run:
+In this project I made an inventory management website. It is called Jontro Inventory. It is about laptop as a product.
+## Main Points
+* Home page has a banner and other 3 section along with header and footer.
+* At the home page there is always 6 products in the produtcs section.
+* At the inventory every product is shown with the items added by user.
+* You can login or register with your email and password or with google account.
+* At my items page you can see products added by user filtering users email.
 
 ### `npm start`
 
