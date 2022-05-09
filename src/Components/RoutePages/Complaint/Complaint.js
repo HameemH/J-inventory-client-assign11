@@ -5,7 +5,8 @@ const Complaint = () => {
  
     return (
         <div className='loginPage py-5'>
-            <div className='loginContainer'>
+         <div className="container">
+         <div className='loginContainer w-75'>
                 <h2>Give Your Complaint and Feedback Here</h2>
                 <form className='d-flex flex-column'>
                 <input type="text" name="name" placeholder='Your Name' id="" className='p-2 m-2 rounded-pill border border-0 shadow' />
@@ -15,6 +16,7 @@ const Complaint = () => {
 
                 </form>
             </div>
+         </div>
         </div>
     );
 };

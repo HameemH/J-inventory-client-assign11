@@ -64,9 +64,9 @@ const ItemdetailandUpdate = () => {
     
     return (
         <div className='loginPage py-5'>
-            <div className="row">
+            <div className="row container">
                 <div className="col-md-6 col-sm-12">
-                    <div className='loginContainer mt-3'>
+                    <div className='loginContainer mt-3  w-75'>
                         <h2>Product Details</h2>
                         <p className='text-danger'>{(item.quantity==0)? 'Item Sold Out': null}</p>
                         <img src={item?.img} className='w-50' alt="" />
@@ -79,10 +79,10 @@ const ItemdetailandUpdate = () => {
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-12">
-                    <div className='loginContainer mt-2'>
+                    <div className='loginContainer mt-2 w-75'>
                         <h2>Restock your Item</h2>
                         
-                    <form onSubmit={updateRestock}>
+                    <form className='d-flex flex-column' onSubmit={updateRestock}>
                     <input type="text" name='quantity' className='p-2 m-2 rounded-pill border border-0 shadow' />
                      <input type="submit" value="Restock" className='btn btn-primary shadow shadow-lg rounded-pill'/> 
                     </form>

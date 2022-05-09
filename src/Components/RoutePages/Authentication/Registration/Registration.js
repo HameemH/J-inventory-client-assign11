@@ -67,7 +67,8 @@ if (GoogleUser || user ){
     return (
         <div>
         <div className='loginPage py-5 '>
-        <div className=' loginContainer mt-5'>
+       <div className="container">
+       <div className=' loginContainer mt-5 w-75'>
         <h1>Welcome</h1>
         <form  className='d-flex flex-column' onSubmit={handleRegistration}>
          <input type="text" name="" id="" placeholder='Your Name' className='p-2 m-2 rounded-pill border border-0 shadow' />
@@ -85,7 +86,8 @@ if (GoogleUser || user ){
         <p className='text-danger'>{customError}</p>
         <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' >Please Login</Link> </p>
         <Button className='btn btn-primary shadow mt-2 rounded-pill' onClick={() => signInWithGoogle()}>Signup with google</Button> 
-    </div>
+        </div>
+       </div>
    </div>
     </div>
     );

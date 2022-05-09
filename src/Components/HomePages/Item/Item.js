@@ -11,8 +11,8 @@ const Item = (props) => {
     }
     return (
   
-        <div className='col-md-4 col-sm-12' style={{backGround:'lightblue'}}>
-            <Card className='shadow' style={{ width: '20rem', backGround:'lightblue'} }>
+        <div className='col-md-4 col-sm-12  ' style={{backGround:'lightblue'}}>
+            <Card className='shadow' style={{ width: '17rem', backGround:'lightblue'} }>
   <Card.Img variant="top" src={img} style={{height:'250px'}} />
   <Card.Body>
     <Card.Title>{name}</Card.Title>

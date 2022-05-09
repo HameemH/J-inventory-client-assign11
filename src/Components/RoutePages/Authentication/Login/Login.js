@@ -66,7 +66,8 @@ const Login = () => {
     return (
         <div>
             <div className=' loginPage py-5'>
-            <div className='loginContainer mt-5'>
+            <div className="container">
+            <div className='loginContainer mt-5 w-75 '>
             <h1>Log In</h1>
             <form className='d-flex flex-column' onSubmit={handleLogin}  >
              <input onChange={handleEmail}   type="email" name="" id="" placeholder='Your Email' className='p-2 mt-2 mb-3 rounded-pill border border-0 shadow' required />
@@ -80,6 +81,7 @@ const Login = () => {
             <p>New here ? <Link to="/registration" className='text-primary pe-auto text-decoration-none mt-3'>Please Register</Link> </p>
             <p>Forget Password? <Link to="" className=' text-primary  text-decoration-none' onClick={resetPassword} >Reset Password</Link> </p>
              <Button on className='btn btn-primary shadow mt-2 rounded-pill' onClick={() => signInWithGoogle()} >Login with google</Button>
+            </div>
             </div>
             <ToastContainer></ToastContainer>
         </div>

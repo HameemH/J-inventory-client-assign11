@@ -33,8 +33,9 @@ const Newitems = () => {
     return (
         <div className='loginPage py-5'>
             <h1 className='text-white'>Add a new item Here</h1>
-           <div className='loginContainer  '>
-           <form onSubmit={handleNewItem}>
+           <div className="container">
+           <div className='loginContainer w-75 '>
+           <form className='d-flex flex-column' onSubmit={handleNewItem}>
                 <input type="url" name="imgUrl" placeholder='Image Url' id="" className='p-2 m-2 rounded-pill border border-0 shadow' />
                 <input type="text" name="name" placeholder='Product Name' id="" className='p-2 m-2 rounded-pill border border-0 shadow' />
                 <input type="text" name="price" placeholder='Product price' id=""className='p-2 m-2 rounded-pill border border-0 shadow' />
@@ -45,6 +46,7 @@ const Newitems = () => {
                 <input type="submit" value="Add New Item" className='btn btn-primary shadow shadow-lg rounded-pill'/>
             </form>
 
+           </div>
            </div>
         </div>
     );
