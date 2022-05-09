@@ -6,11 +6,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Spinner } from 'react-bootstrap';
 import Suppliers from '../Suppliers/Suppliers';
 import Newsletter from '../Newsletter/Newsletter';
+import Setitems from './../../CustomHooks/ItemsHook/ItemsHook';
 
 
 const Home = () => {
     const [user, loading] = useAuthState(auth)
-    if(loading){
+    const [items] = Setitems()
+    if(loading || items.length === 0){
         return  <Spinner animation="border" variant="primary" />
     }
    else{
