@@ -11,7 +11,7 @@ const Inventory = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id, ', id);
-            const url = `https://limitless-beach-92720.herokuapp.com/item/${id}`;
+            const url = `https://j-inventory.onrender.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

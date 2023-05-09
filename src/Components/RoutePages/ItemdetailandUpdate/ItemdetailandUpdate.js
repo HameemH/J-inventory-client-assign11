@@ -9,7 +9,7 @@ const ItemdetailandUpdate = () => {
   
     
     useEffect(()=>{
-      fetch(`https://limitless-beach-92720.herokuapp.com/item/${id}`)
+      fetch(`https://j-inventory.onrender.com/item/${id}`)
       .then(res => res.json())
       .then(data => {
           console.log(data);
@@ -24,7 +24,7 @@ const ItemdetailandUpdate = () => {
      
         const newitem ={quantity: newquantity}
       if(newquantity>=0){
-        fetch(`https://limitless-beach-92720.herokuapp.com/item/${id}`, {
+        fetch(`https://j-inventory.onrender.com/item/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -45,7 +45,7 @@ const ItemdetailandUpdate = () => {
         const newquantity = e.target.quantity.value;
         console.log(newquantity);
         const newitem ={quantity:newquantity}
-        fetch(`https://limitless-beach-92720.herokuapp.com/item/${id}`, {
+        fetch(`https://j-inventory.onrender.com/item/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

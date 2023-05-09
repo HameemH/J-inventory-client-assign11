@@ -41,7 +41,9 @@ const handlePassword =e =>{
         setCustomErrorPassword('');
     }
     else{
+        e.target.reset()
         setCustomErrorPassword('Password should be 6 characters')
+       
     }
    
 }

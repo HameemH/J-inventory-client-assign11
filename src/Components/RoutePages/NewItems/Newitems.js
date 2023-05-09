@@ -14,7 +14,7 @@ const Newitems = () => {
         const vendorEmail = e.target.email.value;
         const description = e.target.description.value;
         const item ={name, price:price, quantity:quantity, supplier,description,img,vendorEmail}
-        fetch('https://limitless-beach-92720.herokuapp.com/item', {
+        fetch('https://j-inventory.onrender.com/item', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -36,13 +36,13 @@ const Newitems = () => {
            <div className="container">
            <div className='loginContainer w-75 '>
            <form className='d-flex flex-column' onSubmit={handleNewItem}>
-                <input type="url" name="imgUrl" placeholder='Image Url' id="" className='p-2 m-2 rounded-pill border border-0 shadow' />
-                <input type="text" name="name" placeholder='Product Name' id="" className='p-2 m-2 rounded-pill border border-0 shadow' />
-                <input type="text" name="price" placeholder='Product price' id=""className='p-2 m-2 rounded-pill border border-0 shadow' />
-                <input type="text" name="supplier" placeholder='Product Supplier' id=""className='p-2 m-2 rounded-pill border border-0 shadow' />
-                <input type="number" name="quantity" placeholder='Product Quantity'className='p-2 m-2 rounded-pill border border-0 shadow' id="" />
+                <input type="url" name="imgUrl" placeholder='Image Url' id="" className='p-2 m-2 rounded-pill border border-0 shadow' required />
+                <input type="text" name="name" placeholder='Product Name' id="" className='p-2 m-2 rounded-pill border border-0 shadow' required />
+                <input type="text" name="price" placeholder='Product price' id=""className='p-2 m-2 rounded-pill border border-0 shadow' required/>
+                <input type="text" name="supplier" placeholder='Product Supplier' id=""className='p-2 m-2 rounded-pill border border-0 shadow' required/>
+                <input type="number" name="quantity" placeholder='Product Quantity'className='p-2 m-2 rounded-pill border border-0 shadow' id="" required />
                 <input type="email" name="email" value={user.email} className='p-2 m-2 rounded-pill border border-0 shadow'id="" disabled />
-                <textarea name="description" id="" cols="30" rows="7" className='p-2 m-2 rounded border border-0 shadow' ></textarea>
+                <textarea name="description" id="" cols="30" rows="7" className='p-2 m-2 rounded border border-0 shadow' required ></textarea>
                 <input type="submit" value="Add New Item" className='btn btn-primary shadow shadow-lg rounded-pill'/>
             </form>
 
